@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_secondary"
+    tools:context="com.renhuan.rhutils.MainActivity">
+
+    <com.renhuan.utils.EditTextWithClear
+        android:id="@+id/editTextWithClear"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit"
+        android:gravity="center_vertical"
+        android:hint="请输入昵称"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.renhuan.utils.StrokeTextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Android"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWithClear"
+        app:layout_constraintStart_toStartOf="@+id/editTextWithClear"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWithClear"
+        app:st_color="@color/white"
+        app:st_width="2dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_close" />
+
+    <com.renhuan.utils.tablayout.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:tabIndicatorColor="@color/purple_200"
+        app:tabIndicatorHeight="30dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextColor="#333333" />
+
+    <com.renhuan.utils.tablayout.TabLayout
+        android:id="@+id/tab1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab"
+        app:tabIndicatorColor="@color/purple_200"
+        app:tabIndicatorHeight="30dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextColor="#333333" />
+
+    <com.renhuan.utils.tablayout.TabLayout
+        android:id="@+id/tab2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab1"
+        app:tabIndicatorColor="@color/purple_200"
+        app:tabIndicatorHeight="30dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextColor="#333333" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
