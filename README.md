@@ -129,7 +129,7 @@
 - **圆角布局**（Android布局必备，[更多用法参考这里](https://github.com/JavaNoober/BackgroundLibrary)）
 - **阴影布局【MaskViewGroup】**（继承viewgroup）
  
-    <img src="/img/tab.gif" width = "450" alt="效果图" align=center />
+    <img src="/img/shadow.jpg" width = "450" alt="效果图" align=center />
     
     ```xml
     <com.renhuan.utils.MaskViewGroup
