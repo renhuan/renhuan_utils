@@ -158,6 +158,16 @@
             app:bl_solid_color="#FFBB86FC" />
     </com.renhuan.utils.MaskViewGroup>
     ```
+    ```java
+    自定义属性介绍：
+      containerShadowColor：阴影颜色
+      containerShadowRadius：阴影半径
+      containerCornerRadius:阴影圆角
+      containerDeltaLength：阴影到边框距离
+      deltaX：阴影X方向偏移
+      deltaY：阴影Y
+      enable：是否显示阴影
+    ```
 ## 工具类
 
 - **DrawableTintHelper**（单个drawable动态着色，不影响其他地方的使用（Android 默认一处地方着色，等于所有地方修改）
