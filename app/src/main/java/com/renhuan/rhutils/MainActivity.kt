@@ -18,6 +18,7 @@ import com.renhuan.utils.tablayout.TabLayout
 import com.renhuan.utils.tintColor
 import com.renhuan.utils.toast
 import com.wuyr.activitymessenger.ActivityMessenger
+import kotlinx.coroutines.GlobalScope
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //跳转的时候调用
 //        MainActivity.startAction(this,"value")
-
 
 //        //赋值
 //        MMKVRepository.str = "张三"
@@ -129,6 +129,7 @@ class MainActivity : AppCompatActivity() {
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
+            view.findViewById<View>(R.id.button).setScale()
             view.findViewById<View>(R.id.button).setOnClickListener { "点击了".toast() }
         }
     }

@@ -12,7 +12,7 @@
         android:layout_gravity="center_horizontal"
         app:containerCornerRadius="25dp"
         app:containerDeltaLength="10dp"
-        app:containerShadowColor="#ccBB86FC"
+        app:containerShadowColor="#BB86FC"
         app:containerShadowRadius="6dp"
         app:deltaX="3dp"
         app:deltaY="3dp"
@@ -29,7 +29,7 @@
             app:bl_corners_radius="25dp"
             app:bl_ripple_color="#ededed"
             app:bl_ripple_enable="true"
-            app:bl_solid_color="#FFBB86FC" />
+            app:bl_solid_color="#BB86FC" />
     </com.renhuan.utils.MaskViewGroup>
 
 
