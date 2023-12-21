@@ -66,7 +66,7 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:src="@mipmap/bbb" />
-  
+
       <com.renhuan.utils.PngImageStroke
           android:id="@+id/viewHighLight"
           android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
           app:ps_scale="1"
           app:ps_src="@mipmap/bbb"
           app:ps_width="1dp" />
-  
+
       <com.renhuan.utils.PngImageStroke
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
@@ -87,14 +87,20 @@
           app:ps_scale="1.2"
           app:ps_src="@mipmap/bbb"
           app:ps_width="2dp" />
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/main
+  ```
+  ![效果图](/img/imgStorke.jpg)
+
+- **EditTextWithClear**（带清除按钮的EditText，继承AppCompatEditText，如果什么都不设置，默认自带显示）
+
+  ```
+   <attr name="et_drawable" format="reference" />   清除按钮的图片
+   <attr name="et_drawableWidth" format="dimension" /> 清除按钮的图片的宽度
+   <attr name="et_drawableHeight" format="dimension" /> 清除按钮的图片高度
+   <attr name="et_drawableColor" format="color" />  清除按钮的图片的颜色，可以着色
   ```
 
-  ![效果图](/img/imgStorke.jpg)
+  ![效果图](/img/storkTextView.jpg)
 
 - **TabLayout**（继承官方TabLayout，横向滑动栏，配合Viewpager，做出炫酷动画）
 
@@ -105,7 +111,7 @@
         val tab = findViewById<TabLayout>(R.id.tab)
         val tab1 = findViewById<TabLayout>(R.id.tab1)
         val tab2 = findViewById<TabLayout>(R.id.tab2)
-  
+
         viewPager.adapter = MyFragmentPagerAdapter(
             supportFragmentManager,
             arrayListOf(
@@ -117,10 +123,10 @@
             ),
             arrayListOf("张三", "李四", "张无忌", "Java", "Android")
         )
-  
+
         //样式1 默认没有图片
         tab.setupWithViewPager(viewPager)
-  
+
         //样式2 加图片（所有tab都显示）
         tab1.setIcons(
             arrayListOf(
@@ -132,7 +138,7 @@
             ), false
         )
         tab1.setupWithViewPager(viewPager)
-  
+
         //样式3 加图片（当前选中tab显示）
         tab2.setIcons(
             arrayListOf(
@@ -144,7 +150,7 @@
             ), true
         )
         tab2.setupWithViewPager(viewPager)
-  
+
   ```
 
   ```xml
@@ -160,7 +166,7 @@
           app:tabMode="scrollable"
           app:tabSelectedTextColor="#ffffff"
           app:tabTextColor="#333333" />
-  
+
       <androidx.viewpager.widget.ViewPager
           android:id="@+id/vp"
           android:layout_width="0dp"
@@ -175,51 +181,45 @@
 
 - **阴影布局【MaskViewGroup】**（继承viewgroup）
 
-  <img src="/img/shadow.jpg" width = "450" alt="效果图" align=center />
+    <img src="/img/shadow.jpg" width = "450" alt="效果图" align=center />
 
-  ```xml
-  <com.renhuan.utils.MaskViewGroup
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      app:containerCornerRadius="25dp"
-      app:containerDeltaLength="10dp"
-      app:containerShadowColor="#ccBB86FC"
-      app:containerShadowRadius="6dp"
-      app:deltaX="3dp"
-      app:deltaY="3dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-<<<<<<< HEAD
+    ```xml
+    <com.renhuan.utils.MaskViewGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:containerCornerRadius="25dp"
+        app:containerDeltaLength="10dp"
+        app:containerShadowColor="#ccBB86FC"
+        app:containerShadowRadius="6dp"
+        app:deltaX="3dp"
+        app:deltaY="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-=======
-  
->>>>>>> origin/main
-      <com.noober.background.view.BLButton
-          android:id="@+id/button"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Button"
-          android:textColor="@color/white"
-          app:bl_corners_radius="25dp"
-          app:bl_ripple_color="#ededed"
-          app:bl_ripple_enable="true"
-          app:bl_solid_color="#FFBB86FC" />
-  </com.renhuan.utils.MaskViewGroup>
-  ```
-
-  ```java
-  自定义属性介绍：
-    containerShadowColor：阴影颜色
-    containerShadowRadius：阴影半径
-    containerCornerRadius:阴影圆角
-    containerDeltaLength：阴影到边框距离
-    deltaX：阴影X方向偏移
-    deltaY：阴影Y
-    enable：是否显示阴影
-  ```
-
+        <com.noober.background.view.BLButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:textColor="@color/white"
+            app:bl_corners_radius="25dp"
+            app:bl_ripple_color="#ededed"
+            app:bl_ripple_enable="true"
+            app:bl_solid_color="#FFBB86FC" />
+    </com.renhuan.utils.MaskViewGroup>
+    ```
+    ```java
+    自定义属性介绍：
+      containerShadowColor：阴影颜色
+      containerShadowRadius：阴影半径
+      containerCornerRadius:阴影圆角
+      containerDeltaLength：阴影到边框距离
+      deltaX：阴影X方向偏移
+      deltaY：阴影Y
+      enable：是否显示阴影
+    ```
 ## 工具类
 
 - **DrawableTintHelper**（单个drawable动态着色，不影响其他地方的使用（Android 默认一处地方着色，等于所有地方修改）
@@ -323,5 +323,4 @@
       }
   }
   ```
-
 - **Xpopu各种弹窗**（Android布局必备，[更多用法参考这里](https://github.com/li-xiaojun/XPopup)）
