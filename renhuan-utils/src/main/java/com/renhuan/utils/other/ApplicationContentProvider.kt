@@ -6,8 +6,10 @@ import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import cat.ereza.customactivityoncrash.config.CaocConfig
+import com.blankj.utilcode.util.AppUtils
 import com.renhuan.utils.CrashActivity
 import com.tencent.mmkv.MMKV
+import com.renhuan.utils.BuildConfig
 
 /**
  * created by renhuan
@@ -24,8 +26,14 @@ class ApplicationContentProvider : ContentProvider() {
         mAppContext = context?.applicationContext!!
         MMKV.initialize(mAppContext)
         CaocConfig.Builder.create()
+            .enabled(BuildConfig.DEBUG)
             .errorActivity(CrashActivity::class.java)
             .apply()
+        if (!BuildConfig.DEBUG) {
+            CrashUtils.init {
+                AppUtils.relaunchApp(true)
+            }
+        }
         return true
     }
 
