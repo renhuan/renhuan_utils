@@ -91,17 +91,6 @@
   ```
   ![效果图](/img/imgStorke.jpg)
 
-- **EditTextWithClear**（带清除按钮的EditText，继承AppCompatEditText，如果什么都不设置，默认自带显示）
-
-  ```
-   <attr name="et_drawable" format="reference" />   清除按钮的图片
-   <attr name="et_drawableWidth" format="dimension" /> 清除按钮的图片的宽度
-   <attr name="et_drawableHeight" format="dimension" /> 清除按钮的图片高度
-   <attr name="et_drawableColor" format="color" />  清除按钮的图片的颜色，可以着色
-  ```
-
-  ![效果图](/img/storkTextView.jpg)
-
 - **TabLayout**（继承官方TabLayout，横向滑动栏，配合Viewpager，做出炫酷动画）
 
   <img src="/img/tab.gif" width = "450" alt="效果图" align=center />
