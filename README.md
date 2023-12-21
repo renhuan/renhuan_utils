@@ -4,7 +4,7 @@
 
 ## [同步github，点我直达](https://github.com/renhuan/renhuan_utils)
 
-- **App二维码下载**
+- ~~**App二维码下载**~~
 
 ![下载二维码](/img/qr.jpg)
 
