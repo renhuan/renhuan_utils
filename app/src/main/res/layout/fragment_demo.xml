@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.renhuan.utils.EditTextWithClear
+        android:id="@+id/editTextWithClear"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:hint="请输入昵称"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.renhuan.utils.StrokeTextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Android"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWithClear"
+        app:layout_constraintStart_toStartOf="@+id/editTextWithClear"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWithClear"
+        app:st_color="@color/purple_200"
+        app:st_width="2dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_close" />
+
+    <com.renhuan.utils.MaskViewGroup
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal"
+        app:containerCornerRadius="25dp"
+        app:containerDeltaLength="10dp"
+        app:containerShadowColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:containerShadowRadius="6dp"
+        app:deltaX="3dp"
+        app:deltaY="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.noober.background.view.BLTextView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            app:bl_corners_radius="25dp"
+            android:textSize="14sp" />
+    </com.renhuan.utils.MaskViewGroup>
+
+    <me.jingbin.library.ByRecyclerView
+        android:id="@+id/byRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/mask" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

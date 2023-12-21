@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="10dp">
+
+    <TextView
+        android:id="@+id/tv_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出错了~"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_show_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="复制日志"
+        android:textColor="#4FACF8"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_sale"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sale" />
+
+
+    <TextView
+        android:id="@+id/tv_log"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:textColor="#999999"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_sale"
+        app:layout_constraintTop_toBottomOf="@+id/tv_show_log"
+        tools:text="尖端科技案件肯德基" />
+
+    <TextView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:background="#80ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.noober.background.view.BLTextView
+        android:id="@+id/tv_exit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:bl_corners_radius="30dp"
+        app:bl_ripple_color="#80ffffff"
+        app:bl_ripple_enable="true"
+        app:bl_solid_color="#FF5722"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_restart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.noober.background.view.BLTextView
+        android:id="@+id/tv_restart"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:text="重启"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:bl_corners_radius="30dp"
+        app:bl_ripple_color="#80ffffff"
+        app:bl_ripple_enable="true"
+        app:bl_solid_color="#03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_exit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

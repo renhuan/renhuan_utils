@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.renhuan.rhutils.BlankFragment3">
+
+    <com.renhuan.utils.PlayPauseView
+        android:id="@+id/playView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:bg_color="@color/purple_200"
+        app:btn_color="@color/white"
+        app:loadingColor="@color/white">
+
+    </com.renhuan.utils.PlayPauseView>
+</FrameLayout>

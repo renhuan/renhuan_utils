@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp' version '1.7.10-1.0.6'
+}
+
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.renhuan.utils"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        // 仅支持 中文
+        resConfigs "zh"
+        // 仅支持  "arm64-v8a" "armeabi-v7a"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+
+    //签名
+    signingConfigs {
+        release {
+            storeFile file('renhuan.jks')
+            storePassword 'qwe123456'
+            keyAlias 'key0'
+            keyPassword 'qwe123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+    applicationVariants.all { variant ->
+        sourceSets {
+            def name = variant.name
+            getByName(name) {  //告知IDE，ksp生成的kotlin代码
+                kotlin.srcDir("build/generated/ksp/$name/kotlin")
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(path: ':renhuan-utils')
+
+    implementation 'io.github.florent37:shapeofview:1.4.7'
+    implementation 'com.github.florent37:expansionpanel:1.2.4'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+    implementation 'com.github.simplepeng:NineGridView:v1.0.3'
+    implementation 'com.alexvasilkov:foldable-layout:1.2.1'
+    implementation 'jp.wasabeef:recyclerview-animators:4.0.2'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.4.+'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+
+    def rxhttpVersion = '2.9.5'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation "com.github.liujingxing.rxhttp:rxhttp:$rxhttpVersion"
+    ksp "com.github.liujingxing.rxhttp:rxhttp-compiler:$rxhttpVersion"
+
+    def lottieVersion = '5.2.0'
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    def glideVersion = '4.13.2'
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    ksp "com.github.bumptech.glide:compiler:$glideVersion"
+
+
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v5.0.6-androidx' // (必选)
+}

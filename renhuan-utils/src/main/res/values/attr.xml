@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EditTextWithClear">
+        <attr name="et_drawable" format="reference" />
+        <attr name="et_drawableWidth" format="dimension" />
+        <attr name="et_drawableHeight" format="dimension" />
+        <attr name="et_drawableColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="StrokeTextView">
+        <attr name="st_color" format="color" />
+        <attr name="st_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PngImageStroke">
+        <attr name="ps_color" format="color" />
+        <attr name="ps_width" format="dimension" />
+        <attr name="ps_scale" format="float" />
+        <attr name="ps_src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowViewGroup">
+        <attr name="containerShadowColor" format="color" />
+        <attr name="containerShadowRadius" format="dimension" />
+        <attr name="containerDeltaLength" format="dimension" />
+        <attr name="containerCornerRadius" format="dimension" />
+        <attr name="deltaX" format="dimension" />
+        <attr name="deltaY" format="dimension" />
+        <attr name="enable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PlayPauseView">
+        <attr name="bg_color" format="color" />
+        <attr name="btn_color" format="color" />
+        <attr name="loadingColor" format="color|reference" />
+        <attr name="gap_width" format="dimension" />
+        <attr name="border_width" format="dimension|reference" />
+        <attr name="hasProgress" format="boolean|reference" />
+        <attr name="space_padding" format="float" />
+        <attr name="anim_duration" format="integer" />
+        <attr name="anim_direction">
+            <enum name="positive" value="1" />
+            <enum name="negative" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

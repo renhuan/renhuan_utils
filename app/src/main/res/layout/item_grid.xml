@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    app:layout_constraintHorizontal_chainStyle="spread">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/ivAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundPercent="1" />
+
+    <TextView
+        android:id="@+id/tvNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="妹纸"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="@id/ivAvatar" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvNick"
+        app:layout_constraintStart_toEndOf="@id/tvNick"
+        app:layout_constraintTop_toTopOf="@id/tvNick"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="这世界总有人在笨拙地爱着你，想把全部的温柔都给你。 希望下一次，能喜欢上一个也喜欢自己的人 ​​​​。"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvNick"
+        app:layout_constraintTop_toBottomOf="@id/tvNick" />
+
+    <me.simple.view.NineGridView
+        android:id="@+id/nineGridView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvNick"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        app:ngv_four_strategy="bili"
+        app:ngv_single_strategy="custom"
+        app:ngv_three_strategy="fill"
+        app:ngv_two_strategy="usual" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
